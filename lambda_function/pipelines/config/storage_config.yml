@@ -1,0 +1,25 @@
+
+storage:
+  classname:  ${STORAGE_CLASSNAME}
+  parameters:
+    retain_input_files: ${RETAIN_INPUT_FILES}
+    root_dir: ${ROOT_DIR}
+    bucket_name: ${STORAGE_BUCKET}
+
+  file_handlers:
+    input:
+      csv:
+        file_pattern: '.*\.csv'
+        classname: tsdat.io.filehandlers.CsvHandler
+      imu:
+        file_pattern: '.*\.bin'
+        classname: pipelines.a2e_imu_ingest.filehandlers.ImuFileHandler
+      sta:
+        file_pattern: '.*\.sta'
+        classname: pipelines.a2e_lidar_ingest.filehandlers.StaFileHandler
+
+    output:
+      netcdf:
+        file_extension: '.nc'
+        classname: tsdat.io.filehandlers.NetCdfHandler
+

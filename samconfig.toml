@@ -1,0 +1,13 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "tsdat-pipeline-stack"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-rq99cgy93a46"
+s3_prefix = "tsdat-pipeline-stack"
+region = "us-west-2"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = ["LambdaFunction=332883119153.dkr.ecr.us-west-2.amazonaws.com/a2e-tsdat-test"]
+parameter_overrides = "SourceBucketName=\"tsdat-pipeline-inputs\" DestinationBucketName=\"tsdat-pipeline-outputs\" LambdaFunctionName=\"tsdat-pipeline-lambda\" LoggingLevel=\"DEBUG\""
+

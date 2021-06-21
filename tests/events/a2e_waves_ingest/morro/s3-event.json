@@ -1,0 +1,38 @@
+{
+  "Records": [
+    {
+      "eventVersion": "2.1",
+      "eventSource": "aws:s3",
+      "awsRegion": "us-west-2",
+      "eventTime": "2021-04-08T01:56:40.986Z",
+      "eventName": "ObjectCreated:Put",
+      "userIdentity": {
+        "principalId": "AWS:AROAU3ALBJQYWMD5KLGF2:Carina.Lansing@pnnl.gov"
+      },
+      "requestParameters": {
+        "sourceIPAddress": "130.20.174.128"
+      },
+      "responseElements": {
+        "x-amz-request-id": "Y1W36HTPE4701V7P",
+        "x-amz-id-2": "nLlUO9I1Bj7Iz4bcMu5q0rYdQ0irPAGzoXy4HYTyHo6z/nAdI9MLwNx0t65VB/xagBCb/o3lRPBabe712LXbxI3FLHswW3Sl"
+      },
+      "s3": {
+        "s3SchemaVersion": "1.0",
+        "configurationId": "4586d195-b484-464c-97f8-027348232818",
+        "bucket": {
+          "name": "a2e-tsdat-test",
+          "ownerIdentity": {
+            "principalId": "A21WSIO2BY6RXE"
+          },
+          "arn": "arn:aws:s3:::a2e-tsdat-test"
+        },
+        "object": {
+          "key": "a2e_waves_ingest/morro/buoy.z06.00.20201201.000000.waves.csv",
+          "size": 3679233,
+          "eTag": "84703366a2bac7da56749b6cdbe37de1",
+          "sequencer": "00606E62D96731561E"
+        }
+      }
+    }
+  ]
+}
